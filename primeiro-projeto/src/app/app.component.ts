@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { MeuPrimeiroComponent } from './meu-primeiro/meu-primeiro.component';
 import { MeuPrimeiro2Component } from './meu-primeiro2/meu-primeiro2.component';
+import { CursosModule } from './cursos/cursos.module';
 
 @Component({
     selector: 'app-root',
@@ -13,9 +14,11 @@ import { MeuPrimeiro2Component } from './meu-primeiro2/meu-primeiro2.component';
       CommonModule, 
       RouterOutlet, 
       MeuPrimeiroComponent,
-      MeuPrimeiro2Component
+      MeuPrimeiro2Component,
+      CursosModule,
     ]
 })
 export class AppComponent {
-  title = 'primeiro-projeto';
+  title = 'Hello World!';
+  subtitle = 'este é um subtitulo'
 }
