@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class CursosComponent {
 
+  nomeportal: string;
+  cursos: string[];
+
+  constructor() {
+    this.nomeportal = 'https://youtube.com';
+    this.cursos = ['Java', 'PHP', 'Go'];
+  }
+
 }
