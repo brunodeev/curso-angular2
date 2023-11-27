@@ -10,6 +10,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
     CommonModule,
     RouterOutlet,
     DataBindingComponent,
+    
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
