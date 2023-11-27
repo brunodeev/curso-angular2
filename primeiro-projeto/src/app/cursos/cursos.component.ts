@@ -13,7 +13,6 @@ export class CursosComponent {
 
   constructor(private cursoService: CursosService) {
     this.nomeportal = 'https://youtube.com';
-
     this.cursos = this.cursoService.getCursos();
   }
 

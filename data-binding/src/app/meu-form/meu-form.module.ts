@@ -1,13 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MeuFormComponent } from './meu-form.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    MeuFormComponent
+  ],
   imports: [
     CommonModule,
-    MeuFormComponent
+    FormsModule
+  ],
+  exports: [
+    MeuFormComponent,
   ],
 })
 export class MeuFormModule { }
