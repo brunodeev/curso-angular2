@@ -1,1 +1,14 @@
-<p>diretiva-ngif works!</p>
+<h3>*ngIf</h3>
+
+<div *ngIf="cursos.length > 0">
+    Lista de cursos aqui
+    <ul *ngIf="mostrarLista">
+        <li *ngFor="let curso of cursos">
+            {{ curso }}
+        </li>
+    </ul>
+</div>
+
+<button (click)="mudarVisibilidade()">
+    Mudar visibilidade
+</button>
