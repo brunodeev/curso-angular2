@@ -1,6 +1,17 @@
 <h1>
     <i class="bi"
-    [class.bi-bookmark]="!isFavorite"
-    [class.bi-bookmark-fill]="isFavorite"
-    (click)="change()"></i>
+    [class.bi-bookmark]="!isFavorite1"
+    [class.bi-bookmark-fill]="isFavorite1"
+    (click)="change1()"></i>
+</h1>
+
+<h1>
+    <i
+        class="bi"
+        [ngClass]="{
+            'bi-bookmark': !isFavorite2,
+            'bi-bookmark-fill': isFavorite2,
+        }"
+        (click)="change2()"
+    ></i>
 </h1>

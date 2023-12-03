@@ -7,9 +7,14 @@ import { Component } from '@angular/core';
 })
 export class DiretivaNgclassComponent {
 
-  isFavorite: boolean = false;
+  isFavorite1: boolean = false;
+  isFavorite2: boolean = false;
 
-  change() {
-    this.isFavorite = !this.isFavorite;
+  change1() {
+    this.isFavorite1 = !this.isFavorite1;
+  }
+
+  change2() {
+    this.isFavorite2 = !this.isFavorite2;
   }
 }
