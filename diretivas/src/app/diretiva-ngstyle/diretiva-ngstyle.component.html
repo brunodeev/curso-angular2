@@ -1,0 +1,42 @@
+<br><br>
+<!-- Style Binding -->
+<h5>Styles com property binding (style binding)</h5>
+
+<div class="main">
+    <button
+    [style.backgroundColor]="isActive ? 'cyan' : 'gray'"
+    [style.color]="isActive ? 'black' : 'white'"
+    [style.fontWeight]="isActive ? 'bold' : 'normal'"
+    [style.fontSize]="fontsSize + 'px'"
+    (click)="change()"
+    >
+        Ativar/Desativar
+    </button>
+</div>
+
+<br><br>
+
+<div class="button">
+    <input type="text" [(ngModel)]="fontsSize">
+    <button (click)="less()">-</button>
+    <button (click)="more()">+</button>
+</div>
+
+<br><br>
+
+<!-- ngStyle -->
+<h5>Styles com ngStyle</h5>
+
+<div class="main">
+    <button
+    [ngStyle]="{
+        'backgroundColor': (isActive ? 'cyan' : 'gray'),
+        'color': (isActive ? 'black' : 'white'),
+        'fontWeight': (isActive ? 'bold' : 'normal'),
+        'fontSize': (fontsSize + 'px'),
+    }"
+    (click)="change()"
+    >
+        Ativar/Desativar
+    </button>
+</div>
