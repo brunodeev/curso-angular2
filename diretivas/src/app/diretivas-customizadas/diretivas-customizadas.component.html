@@ -13,3 +13,17 @@
 <p [highlight]="'red'" [defaultColor]="'blue'">
     Texto com highlight com cores personalizadas
 </p>
+
+<h3>Diretiva de estrutura com ngElse</h3>
+
+<div *ngIf="mostrarCursos">
+    Lista de cursos aqui
+</div>
+
+<div *ngElse="mostrarCursos">
+    Nao existem cursos para serem listados
+</div>
+
+<br>
+
+<button (click)="change()">Mostrar/esconder lista</button>
