@@ -5,7 +5,8 @@ import { CursosService } from './cursos.service';
 @Component({
   selector: 'app-cursos',
   templateUrl: './cursos.component.html',
-  styleUrl: './cursos.component.scss'
+  styleUrl: './cursos.component.scss',
+  //providers: [CursosService],     caso deseje instanciar a segunda vez
 })
 export class CursosComponent {
 
