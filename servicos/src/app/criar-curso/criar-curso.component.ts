@@ -6,7 +6,7 @@ import { CursosService } from '../cursos/cursos.service';
   selector: 'app-criar-curso',
   templateUrl: './criar-curso.component.html',
   styleUrl: './criar-curso.component.scss',
-  //providers: [CursosService],         caso deseje instanciar a primeira vez
+  providers: [CursosService],   //      caso deseje instanciar a primeira vez
 })
 export class CriarCursoComponent {
 

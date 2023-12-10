@@ -6,7 +6,7 @@ import { CursosService } from './cursos.service';
   selector: 'app-cursos',
   templateUrl: './cursos.component.html',
   styleUrl: './cursos.component.scss',
-  //providers: [CursosService],     caso deseje instanciar a segunda vez
+  providers: [CursosService],     // caso deseje instanciar a segunda vez
 })
 export class CursosComponent {
 
@@ -18,6 +18,11 @@ export class CursosComponent {
 
   ngOnInit() {
     this.cursos = this._cursosService.getCursos();
+    
+    this._cursosService.emitirCursoCriado.subscribe(
+
+      curso => console.log(curso)
+    );
   }
 
 }
