@@ -1,6 +1,6 @@
 <h5>Exemplos de Pipes</h5>
 
-<p>Título: {{ book.title | uppercase }}</p>
+<p>Título: {{ book.title | uppercase | lowercase | camelCase }}</p>
 <p>Páginas: {{ book.numberOfPages | number }}</p>
 <p>Avaliação: {{ book.rating | number:'1.1-2' }}</p>
 <p>Data de lançamento: {{ book.releaseDate | date:'dd/MM/yyyy' }}</p>
