@@ -1,0 +1,9 @@
+<h5>Exemplos de Pipes</h5>
+
+<p>Título: {{ book.title | uppercase }}</p>
+<p>Páginas: {{ book.numberOfPages | number }}</p>
+<p>Avaliação: {{ book.rating | number:'1.1-2' }}</p>
+<p>Data de lançamento: {{ book.releaseDate | date:'dd/MM/yyyy' }}</p>
+<p>Preço: {{ book.price | currency:'BRL':true }}</p>
+<br>
+<p>Livro: {{ book | json }}</p>
