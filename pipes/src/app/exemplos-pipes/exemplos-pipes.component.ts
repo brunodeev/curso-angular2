@@ -15,4 +15,8 @@ export class ExemplosPipesComponent {
     price : 96.94,
   }
 
+  books: string[] = ['JavaScript', 'Angular'];
+
+  filtro: string = '';
+
 }

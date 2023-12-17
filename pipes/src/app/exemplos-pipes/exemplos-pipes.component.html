@@ -7,3 +7,9 @@
 <p>Preço: {{ book.price | currency:'BRL' }}</p>
 <br>
 <p>Livro: {{ book | json }}</p>
+
+<input type="text" [(ngModel)]="filtro">
+
+<ul>
+    <li *ngFor="let livro of books | filtroArray:filtro">{{ livro }}</li>
+</ul>
