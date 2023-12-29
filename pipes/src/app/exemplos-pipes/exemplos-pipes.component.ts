@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'exemplos-pipes',
@@ -37,6 +38,13 @@ export class ExemplosPipesComponent {
     });
   }
 
+  valorAsync = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Valor async'), 2000);
+  })
+
+  valorComObservable = new Observable<string>(observable => {
+    setTimeout(() => observable.next('Com Observable'), 3000);
+  })
   constructor() {}
 
   ngOnInit() {}
