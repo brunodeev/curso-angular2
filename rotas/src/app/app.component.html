@@ -3,14 +3,19 @@
     <a class="navbar-brand" routerLink="">Rotas</a>
     <div class="collapse navbar-collapse">
       <div class="navbar-nav">
-        <a class="nav-link" routerLinkActive="active" routerLink="/login">Login</a>
-        <a class="nav-link" routerLinkActive="active" routerLink="/materias">Matérias</a>
+        <a class="nav-link" routerLinkActive="active" routerLink="login">Login</a>
+        <a class="nav-link" routerLinkActive="active" routerLink="materias">Matérias</a>
+        <a class="nav-link" routerLinkActive="active" [routerLink]="['materia', idMateria.value]">Matéria com Id</a>
       </div>
     </div>
   </div>
 </nav>
 
 <div class="container-fluid bg-tertiary ">
+
+  <p>Insira o ID da matéria</p>
+  <input #idMateria>
+
   <router-outlet></router-outlet>
 </div>
 
