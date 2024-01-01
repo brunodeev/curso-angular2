@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MateriasService } from './materias.service';
 
 @Component({
   selector: 'app-materias',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './materias.component.css'
 })
 export class MateriasComponent {
+
+  materias?: any[];
+
+  constructor(private service: MateriasService) {}
+
+  ngOnInit() {
+    this.materias = this.service.getMaterias(); 
+  }
 
 }

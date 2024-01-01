@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { MateriasService } from '../materias/materias.service';
 
 @Component({
   selector: 'app-materia-detalhe',
@@ -9,10 +10,11 @@ import { Subscription } from 'rxjs';
 })
 export class MateriaDetalheComponent {
 
-  id?: string;
+  id?: number;
   subscription?: Subscription;
+  materia?: any;
   
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private materiaService: MateriasService, private router: Router) {
     //this.id = this.route.snapshot.params['id'];
   }
 
@@ -20,6 +22,12 @@ export class MateriaDetalheComponent {
     this.subscription = this.route.params.subscribe(
       (params: any) => {
         this.id = params['id'];
+
+        this.materia = this.materiaService.getMateria(this.id!);
+
+        if(this.materia == null) {
+          this.router.navigate(['naoEncontrado']);
+        }
     });
   }
 
