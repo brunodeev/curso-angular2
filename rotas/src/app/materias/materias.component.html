@@ -1,5 +1,8 @@
+<p>Lista de Matérias</p>
+<p>Página {{ pagina }}</p>
 <div class="list-group">
     <a class="list-group-item list-group-item-action" *ngFor="let materia of materias" [routerLink]="['/materia', materia.id]">
         {{ materia.nome }}
     </a>
-  </div>
+</div>
+<button class="btn btn-primary" (click)="nextPage()">Próxima</button>
