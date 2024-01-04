@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { MateriasService } from '../materias/materias.service';
+import { MateriasService } from '../materias.service';
 
 @Component({
   selector: 'app-materia-detalhe',

@@ -13,19 +13,19 @@ export class MateriasComponent {
 
   materias?: any[];
   pagina?: number;
-  subsciption?: Subscription
+  subscription?: Subscription
 
   constructor(private service: MateriasService, private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit() {
     this.materias = this.service.getMaterias();
-    this.subsciption = this.route.queryParams.subscribe((queryParams: any) => {
+    this.subscription = this.route.queryParams.subscribe((queryParams: any) => {
       this.pagina = queryParams['pagina']
     });
   }
 
   ngOnDestroy() {
-    this.subsciption?.unsubscribe();
+    this.subscription?.unsubscribe();
   }
 
   nextPage() {
