@@ -1,1 +1,17 @@
-<p>professor-form works!</p>
+<h5 class="mb-4">Criar/Editar Professor</h5>
+
+<form>
+    <div class="mb-3">
+        <label for="idProfessor" class="form-label">ID</label>
+        <input disabled [(ngModel)]="professor.id" class="form-control" id="idProfessor" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="mb-3">
+        <label for="nomeProfessor" class="form-label">Nome</label>
+        <input type="text" [(ngModel)]="professor.nome" class="form-control" id="nomeProfessor" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="mb-3">
+        <label for="emailProfessor" class="form-label">Email</label>
+        <input type="text" [(ngModel)]="professor.email" class="form-control" id="emailProfessor" [ngModelOptions]="{standalone: true}">
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</form>

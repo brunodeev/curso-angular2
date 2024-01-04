@@ -1,2 +1,15 @@
-<p>Foi hein!</p>
-<router-outlet></router-outlet>
+<div class="row">
+    <div class="col-6">
+        <p>Lista de Professores</p>
+
+        <div class="list-group">
+            <div class="list-group-item" *ngFor="let professor of professores" [routerLink]="[professor.id]" routerLinkActive="active">
+                {{ professor.nome }}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6 pt-5">
+        <router-outlet></router-outlet>
+    </div>
+</div>

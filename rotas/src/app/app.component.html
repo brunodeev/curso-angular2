@@ -5,17 +5,17 @@
       <div class="navbar-nav">
         <a class="nav-link" routerLinkActive="active" routerLink="login">Login</a>
         <a class="nav-link" routerLinkActive="active" routerLink="materias" [queryParams]="{pagina:1}">Matérias</a>
-        <a class="nav-link" routerLinkActive="active" [routerLink]="['materia', idMateria.value]">Matéria com Id</a>
+        <!--a class="nav-link" routerLinkActive="active" [routerLink]="['materia', idMateria.value]">Matéria com Id</a-->
         <a class="nav-link" routerLinkActive="active" routerLink="professores">Professores</a>
       </div>
     </div>
   </div>
 </nav>
 
-<div class="container-fluid bg-tertiary ">
+<div class="container pt-3">
 
-  <p>Insira o ID da matéria</p>
-  <input #idMateria>
+  <!-- <p>Insira o ID da matéria</p>
+  <input #idMateria> -->
 
   <router-outlet></router-outlet>
 </div>
