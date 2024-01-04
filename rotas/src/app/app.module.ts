@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { MateriasService } from './materias/materias.service';
 import { MateriasModule } from './materias/materias.module';
+import { ProfessoresModule } from './professores/professores.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MateriasModule } from './materias/materias.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MateriasModule
+    MateriasModule,
+    ProfessoresModule
   ],
   providers: [MateriasService],
   bootstrap: [AppComponent]
